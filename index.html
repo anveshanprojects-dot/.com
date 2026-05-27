@@ -11,52 +11,62 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-body, h1, h2, h3, h4, h5, h6 { font-family: "Raleway", sans-serif; }
-body, html { height: 100%; line-height: 1.8; scroll-behavior: smooth; }
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
 
 .bgimg-1 {
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-background-image: url("bb.jpg");
-min-height: 80%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("bb.jpg");
+  min-height: 80%;
 }
 
 .bgimg-2 {
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-background-image: url("bannnn.jpg");
-min-height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("bannnn.jpg");
+  min-height: 50%;
 }
 
 @media only screen and (max-width:768px){
-.bgimg-1, .bgimg-2 { background-attachment: scroll; }
+  .bgimg-1, .bgimg-2 {
+    background-attachment: scroll;
+  }
 }
 
 .team-grid{
-display:grid;
-grid-template-columns: repeat(4, minmax(0,1fr));
-gap:16px;
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap:16px;
 }
 
 .team-card img{
-width:100%;
-border-radius:6px;
+  width:100%;
+  border-radius:6px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Navbar (sit on top) -->
+<!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
 
     <a href="#home" class="w3-bar-item w3-button w3-wide">
-      <img src="shishir.jpg" alt="Anveshan" style="height: 1cm;width: 1cm;"> ANVESHAN
+      <img src="shishir.jpg" alt="Anveshan" style="height:1cm;width:1cm;">
+      ANVESHAN
     </a>
 
     <div class="w3-right w3-hide-small">
@@ -68,24 +78,27 @@ border-radius:6px;
         <i class="fa fa-cogs"></i> Offers
       </a>
 
-     
-
       <a href="services.html" class="w3-bar-item w3-button">
         <i class="fa fa-cogs"></i> SERVICES
       </a>
     </div>
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+    <a href="javascript:void(0)"
+    class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+    onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
 
   </div>
 </div>
 
+<!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
 style="display:none" id="mySidebar">
 
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">
+  <a href="javascript:void(0)"
+  onclick="w3_close()"
+  class="w3-bar-item w3-button w3-large w3-padding-16">
      <i class="fa fa-close"></i> Close
   </a>
 
@@ -97,27 +110,27 @@ style="display:none" id="mySidebar">
     <i class="fa fa-cogs"></i> Offers
   </a>
 
-  
-
   <a href="services.html" onclick="w3_close()" class="w3-bar-item w3-button">
     <i class="fa fa-cogs"></i> SERVICES
   </a>
 
 </nav>
 
-<!-- HEADER -->
+<!-- Header -->
 <header class="bgimg-1 w3-display-container" id="home">
-<div class="w3-display-middle">
-<span class="w3-black w3-padding-large w3-xlarge">ANVESHAN</span>
-</div>
+  <div class="w3-display-middle">
+    <span class="w3-black w3-padding-large w3-xlarge">ANVESHAN</span>
+  </div>
 </header>
 
-<!-- ABOUT -->
+<!-- About -->
 <div class="w3-container" style="padding:128px 16px" id="about">
+
 <h3 class="w3-center">ABOUT THE COMPANY</h3>
 <p class="w3-center w3-large">Key features of our company</p>
 
 <div class="w3-row-padding w3-center" style="margin-top:64px">
+
 <div class="w3-quarter">
 <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
 <p class="w3-large">Responsive</p>
@@ -141,9 +154,9 @@ style="display:none" id="mySidebar">
 <p class="w3-large">Support</p>
 <p>Clear communication and help.</p>
 </div>
-</div>
-</div>
 
+</div>
+</div>
 <!-- ABOUT ME -->
 <div class="w3-container w3-light-grey w3-padding-64">
 <div class="w3-row">
@@ -163,12 +176,6 @@ Our goal is simple — to deliver meaningful work that helps people and business
 </div>
 </div>
 </div>
-
-<!-- TEAM -->
-<div class="w3-container w3-padding-64" id="team">
-<div id="teamContainer" class="team-grid"></div>
-</div>
-
 <!-- SERVICES GRID -->
 <div class="w3-row w3-container">
   <div class="w3-center w3-padding-64">
@@ -196,76 +203,164 @@ Our goal is simple — to deliver meaningful work that helps people and business
   </div>
 </div>
 <br>
-<!-- PRICING -->
 
- <!-- Grid -->
-  <div class="w3-row-padding" id="plans">
-    <div class="w3-center w3-padding-64">
-      <h3>Pricing Plans</h3>
-      <p>Choose a pricing plan that fits your needs.</p>
-    </div>
+<!-- Pricing -->
+<div class="w3-row-padding" id="plans">
 
-  <div class="w3-third w3-margin-bottom">
-    <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-      <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-    
-      <li class="w3-padding-16"><b>5</b> Graphics Designs</li>
-      <li class="w3-padding-16"><b>3</b> Boosting</li>
-      <li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
-      <li class="w3-padding-16"><b>Endless</b> Support</li>
-      <li class="w3-padding-16">
-        <h2 class="w3-wide">$10</h2>
-        <span class="w3-opacity">per month</span>
-      </li>
-      <li class="w3-light-grey w3-padding-24">
-        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
-      </li>
-    </ul>
-  </div>
+<div class="w3-center w3-padding-64">
+<h3>Pricing Plans</h3>
+<p>Choose a pricing plan that fits your needs.</p>
+</div>
 
-  <div class="w3-third w3-margin-bottom">
-    <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-      <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-      
-      <li class="w3-padding-16"><b>10+</b> Graphics Designs</li>
-      <li class="w3-padding-16"><b>5</b> Boosting</li>
-      <li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
-      <li class="w3-padding-16"><b>Endless</b> Support</li>
-      <li class="w3-padding-16">
-        <h2 class="w3-wide">$20</h2>
-        <span class="w3-opacity">per month</span>
-      </li>
-      <li class="w3-light-grey w3-padding-24">
-        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
-      </li>
-    </ul>
-  </div>
+<!-- Basic -->
+<div class="w3-third w3-margin-bottom">
+<ul class="w3-ul w3-border w3-center w3-hover-shadow">
 
-  <div class="w3-third w3-margin-bottom">
-    <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-      <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-      
-      <li class="w3-padding-16"><b>15</b> Graphics Designs</li>
-      <li class="w3-padding-16"><b>10</b> Boosting</li>
-      <li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
-      <li class="w3-padding-16"><b>Endless</b> Support</li>
-      <li class="w3-padding-16">
-        <h2 class="w3-wide">$30</h2>
-        <span class="w3-opacity">per month</span>
-      </li>
-      <li class="w3-light-grey w3-padding-24">
-        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
-      </li>
-    </ul>
-  </div>
+<li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+
+<li class="w3-padding-16"><b>5</b> Graphics Designs</li>
+<li class="w3-padding-16"><b>3</b> Boosting</li>
+<li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
+<li class="w3-padding-16"><b>Endless</b> Support</li>
+
+<li class="w3-padding-16">
+<h2 class="w3-wide">$10</h2>
+<span class="w3-opacity">per month</span>
+</li>
+
+<li class="w3-light-grey w3-padding-24">
+<button class="w3-button w3-green w3-padding-large"
+onclick="openForm('Basic')">
+Buy Now
+</button>
+</li>
+
+</ul>
+</div>
+
+<!-- Pro -->
+<div class="w3-third w3-margin-bottom">
+<ul class="w3-ul w3-border w3-center w3-hover-shadow">
+
+<li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+
+<li class="w3-padding-16"><b>10+</b> Graphics Designs</li>
+<li class="w3-padding-16"><b>5</b> Boosting</li>
+<li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
+<li class="w3-padding-16"><b>Endless</b> Support</li>
+
+<li class="w3-padding-16">
+<h2 class="w3-wide">$20</h2>
+<span class="w3-opacity">per month</span>
+</li>
+
+<li class="w3-light-grey w3-padding-24">
+<button class="w3-button w3-green w3-padding-large"
+onclick="openForm('Pro')">
+Buy Now
+</button>
+</li>
+
+</ul>
+</div>
+
+<!-- Premium -->
+<div class="w3-third w3-margin-bottom">
+<ul class="w3-ul w3-border w3-center w3-hover-shadow">
+
+<li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+
+<li class="w3-padding-16"><b>15</b> Graphics Designs</li>
+<li class="w3-padding-16"><b>10</b> Boosting</li>
+<li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
+<li class="w3-padding-16"><b>Endless</b> Support</li>
+
+<li class="w3-padding-16">
+<h2 class="w3-wide">$30</h2>
+<span class="w3-opacity">per month</span>
+</li>
+
+<li class="w3-light-grey w3-padding-24">
+<button class="w3-button w3-green w3-padding-large"
+onclick="openForm('Premium')">
+Buy Now
+</button>
+</li>
+
+</ul>
+</div>
 
 </div>
 
-<!-- CONTACT -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<!-- Buy Form Modal -->
+<div id="buyFormModal" class="w3-modal">
+
+<div class="w3-modal-content w3-card-4 w3-animate-top"
+style="max-width:500px">
+
+<header class="w3-container w3-black">
+<span onclick="closeForm()"
+class="w3-button w3-display-topright">&times;</span>
+<h3>Purchase Service</h3>
+</header>
+
+<div class="w3-container w3-padding-24">
+
+<form
+action="https://formspree.io/f/xpqnoezb"
+method="POST"
+onsubmit="showMessage()"
+>
+
+<label><b>Name</b></label>
+<input
+class="w3-input w3-border w3-margin-bottom"
+type="text"
+name="name"
+required>
+
+<label><b>Select Plan</b></label>
+<select
+class="w3-select w3-border w3-margin-bottom"
+name="plan"
+id="planInput"
+required
+>
+<option value="">Choose Plan</option>
+<option value="Basic">Basic</option>
+<option value="Pro">Pro</option>
+<option value="Premium">Premium</option>
+</select>
+
+<label><b>How Many Months?</b></label>
+<input
+class="w3-input w3-border w3-margin-bottom"
+type="number"
+name="months"
+min="1"
+required>
+
+<button
+class="w3-button w3-green w3-block"
+type="submit">
+Confirm Purchase
+</button>
+
+</form>
+
+</div>
+</div>
+</div>
+
+<!-- Contact -->
+<div class="w3-container w3-light-grey"
+style="padding:128px 16px"
+id="contact">
+
 <h3 class="w3-center">CONTACT</h3>
 
 <div class="w3-row-padding" style="margin-top:48px">
+
 <div class="w3-col m5">
 <p>Kathmandu, Nepal</p>
 <p>9761120781</p>
@@ -273,17 +368,40 @@ Our goal is simple — to deliver meaningful work that helps people and business
 </div>
 
 <div class="w3-col m7">
+
 <form action="https://formspree.io/f/xykjkdvn" method="POST">
-<input class="w3-input w3-border" type="text" name="name" placeholder="Name" required>
-<input class="w3-input w3-border w3-section" type="email" name="email" placeholder="Email" required>
-<textarea class="w3-input w3-border w3-section" name="message" placeholder="Message" required></textarea>
-<button class="w3-button w3-black w3-right" type="submit">SEND</button>
+
+<input class="w3-input w3-border"
+type="text"
+name="name"
+placeholder="Name"
+required>
+
+<input class="w3-input w3-border w3-section"
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+<textarea
+class="w3-input w3-border w3-section"
+name="message"
+placeholder="Message"
+required></textarea>
+
+<button
+class="w3-button w3-black w3-right"
+type="submit">
+SEND
+</button>
+
 </form>
+
 </div>
 </div>
 </div>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
 <a href="#home" class="w3-button w3-light-grey">To the top</a>
 <p>Powered by Anveshan</p>
@@ -293,11 +411,25 @@ Our goal is simple — to deliver meaningful work that helps people and business
 var mySidebar = document.getElementById("mySidebar");
 
 function w3_open() {
-  mySidebar.style.display = (mySidebar.style.display === 'block') ? 'none' : 'block';
+  mySidebar.style.display =
+  (mySidebar.style.display === 'block') ? 'none' : 'block';
 }
 
 function w3_close() {
   mySidebar.style.display = "none";
+}
+
+function openForm(plan) {
+  document.getElementById("buyFormModal").style.display = "block";
+  document.getElementById("planInput").value = plan;
+}
+
+function closeForm() {
+  document.getElementById("buyFormModal").style.display = "none";
+}
+
+function showMessage() {
+  alert("Thanks for choosing these services!");
 }
 </script>
 
