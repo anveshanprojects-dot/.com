@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Services - Anveshan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, sans-serif;}
+
+/* HEADER */
+.header-banner{position:relative;width:100%;}
+.header-banner img{
+width:100%;
+height:clamp(180px, 30vw, 320px);
+object-fit:cover;
+}
+.header-banner h1{
+position:absolute;
+top:50%;left:50%;
+transform:translate(-50%,-50%);
+color:white;
+font-size:clamp(22px,4vw,42px);
+text-shadow:2px 2px 10px rgba(0,0,0,0.6);
+}
+
+/* GRID */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:20px;
+}
+@media(max-width:992px){
+.services-grid{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:600px){
+.services-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:350px){
+.services-grid{grid-template-columns:1fr;}
+}
+
+.service-card{
+position:relative;
+cursor:pointer;
+overflow:hidden;
+border-radius:12px;
+}
+.service-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+transition:.3s;
+}
+.service-card:hover img{transform:scale(1.05);}
+
+.service-card span{
+position:absolute;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(0,0,0,0.6);
+color:white;
+padding:6px 12px;
+border-radius:6px;
+}
+
+/* IMAGE MODAL */
+.image-modal{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.8);
+z-index:1000;
+justify-content:center;
+align-items:center;
+}
+.image-modal img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+/* CONTACT MODAL */
+.modal{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+z-index:1000;
+padding:15px;
+overflow:auto;
+}
+.modal form{
+background:#0b3d91;
+color:white;
+padding:20px;
+max-width:350px;
+margin:60px auto;
+display:flex;
+flex-direction:column;
+gap:12px;
+border-radius:10px;
+}
+.modal input,.modal select{
+padding:10px;
+border:none;
+border-radius:6px;
+}
+.modal button{
+padding:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+.modal button[type="submit"]{
+background:white;
+color:#0b3d91;
+}
+.cancel-btn{
+background:#082c6c;
+color:white;
+}
+
+/* CONTACT BUTTON */
+.contact-section{
+text-align:center;
+padding:20px;
+}
+.contact-btn{
+background:#0b3d91;
+color:white;
+border:none;
+padding:14px 30px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+width:100%;
+max-width:350px;
+}
+.contact-btn:hover{background:#082c6c;}
+
+/* FOOTER */
+.footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px 10px;
+}
+.footer-content{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+@media(max-width:600px){
+.footer-content{flex-direction:column;}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header-banner">
+<img src="bannnn.jpg">
+<h1>Our Services</h1>
+</header>
+
+<div id="servicesContainer" class="services-grid"></div>
+
+<div class="contact-section">
+<button class="contact-btn" id="openContact">Contact Now</button>
+</div>
+
+<!-- Image Modal -->
+<div class="image-modal" id="imageModal">
+<img id="modalImage">
+</div>
+
+<!-- Contact Modal -->
+<div class="modal" id="orderModal">
+<form id="orderForm" action="https://formspree.io/f/xpqyowag" method="POST">
+
+<h3>Contact</h3>
+
+<input name="name" placeholder="Your Name" required>
+<input name="email" type="email" placeholder="Your Email" required>
+
+<select name="service" required>
+<option>Banner Design</option>
+<option>Frontend Web Development</option>
+<option>Backend Web Development</option>
+<option>Logo Design</option>
+<option>Document Editing</option>
+<option>CV Design and Editing</option>
+<option>Graphics Designs</option>
+<option>Other Services</option>
+</select>
+
+<input name="contact" placeholder="Contact Number" required>
+
+<button type="submit">Submit</button>
+<button type="button" class="cancel-btn" id="closeModal">Cancel</button>
+
+</form>
+</div>
+
+<footer class="footer">
+<div class="footer-content">
+<span>© 2025 Anveshan</span>
+<span>All Rights Reserved</span>
+</div>
+</footer>
+
+<script>
+const servicesData=[
+{img:"banner.jpeg"},
+{img:"logo.jpeg"},
+{img:"frontend.jpg"},
+{img:"bakend.jpg"},
+{img:"documents.jpg"},
+{img:"cv.jpg"},
+{img:"graphics.jpg"},
+{img:"other.jpg"}
+];
+
+const container=document.getElementById("servicesContainer");
+
+servicesData.forEach(service=>{
+const card=document.createElement("div");
+card.className="service-card";
+card.innerHTML=`<img src="${service.img}"><span>Tap to View</span>`;
+card.onclick=()=>{
+document.getElementById("modalImage").src=service.img;
+document.getElementById("imageModal").style.display="flex";
+};
+container.appendChild(card);
+});
+
+/* Close image modal */
+document.getElementById("imageModal").onclick=function(){
+this.style.display="none";
+};
+
+/* Contact modal */
+const orderModal=document.getElementById("orderModal");
+
+document.getElementById("openContact").onclick=()=>{
+orderModal.style.display="block";
+};
+
+document.getElementById("closeModal").onclick=()=>{
+orderModal.style.display="none";
+};
+
+window.onclick=function(e){
+if(e.target==orderModal){
+orderModal.style.display="none";
+}
+};
+
+/* FORM + FORMSPREE + WHATSAPP */
+const form=document.getElementById("orderForm");
+
+form.addEventListener("submit",function(e){
+e.preventDefault();
+
+const name=form.name.value;
+const email=form.email.value;
+const service=form.service.value;
+const contact=form.contact.value;
+
+fetch(form.action,{
+method:"POST",
+body:new FormData(form),
+headers:{'Accept':'application/json'}
+})
+.then(res=>{
+if(res.ok){
+
+const msg=`Hello, I am ${name}.
+I need ${service}.
+Email: ${email}
+Phone: ${contact}`;
+
+const url=`https://wa.me/9779761120781?text=${encodeURIComponent(msg)}`;
+window.open(url,"_blank");
+
+alert("Message Sent Successfully!");
+form.reset();
+orderModal.style.display="none";
+
+}else{
+alert("Error sending!");
+}
+})
+.catch(()=>{
+alert("Network error!");
+});
+});
+</script>
+
+</body>
+</html>

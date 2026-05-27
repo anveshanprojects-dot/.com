@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anveshan</title>
+
+<link rel="shortcut icon" href="shishir.jpg" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1, h2, h3, h4, h5, h6 { font-family: "Raleway", sans-serif; }
+body, html { height: 100%; line-height: 1.8; scroll-behavior: smooth; }
+
+.bgimg-1 {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url("bb.jpg");
+min-height: 80%;
+}
+
+.bgimg-2 {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url("bannnn.jpg");
+min-height: 50%;
+}
+
+@media only screen and (max-width:768px){
+.bgimg-1, .bgimg-2 { background-attachment: scroll; }
+}
+
+.team-grid{
+display:grid;
+grid-template-columns: repeat(4, minmax(0,1fr));
+gap:16px;
+}
+
+.team-card img{
+width:100%;
+border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+
+    <a href="#home" class="w3-bar-item w3-button w3-wide">
+      <img src="shishir.jpg" alt="Anveshan" style="height: 1cm;width: 1cm;"> ANVESHAN
+    </a>
+
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">
+        <i class="fa fa-info-circle"></i> ABOUT
+      </a>
+
+      <a href="#team" class="w3-bar-item w3-button">
+        <i class="fa fa-cogs"></i> Offers
+      </a>
+
+      <a href="#work" class="w3-bar-item w3-button">
+        <i class="fa fa-briefcase"></i> WORK
+      </a>
+
+      <a href="services.html" class="w3-bar-item w3-button">
+        <i class="fa fa-cogs"></i> SERVICES
+      </a>
+    </div>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+style="display:none" id="mySidebar">
+
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">
+     <i class="fa fa-close"></i> Close
+  </a>
+
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">
+    <i class="fa fa-info-circle"></i> ABOUT
+  </a>
+
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">
+    <i class="fa fa-cogs"></i> Offers
+  </a>
+
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">
+    <i class="fa fa-briefcase"></i> WORK
+  </a>
+
+  <a href="services.html" onclick="w3_close()" class="w3-bar-item w3-button">
+    <i class="fa fa-cogs"></i> SERVICES
+  </a>
+
+</nav>
+
+<!-- HEADER -->
+<header class="bgimg-1 w3-display-container" id="home">
+<div class="w3-display-middle">
+<span class="w3-black w3-padding-large w3-xlarge">ANVESHAN</span>
+</div>
+</header>
+
+<!-- ABOUT -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+<h3 class="w3-center">ABOUT THE COMPANY</h3>
+<p class="w3-center w3-large">Key features of our company</p>
+
+<div class="w3-row-padding w3-center" style="margin-top:64px">
+<div class="w3-quarter">
+<i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
+<p class="w3-large">Responsive</p>
+<p>Works smoothly across all devices.</p>
+</div>
+
+<div class="w3-quarter">
+<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+<p class="w3-large">Passion</p>
+<p>Driven by creativity and curiosity.</p>
+</div>
+
+<div class="w3-quarter">
+<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+<p class="w3-large">Design</p>
+<p>Modern meaningful aesthetics.</p>
+</div>
+
+<div class="w3-quarter">
+<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+<p class="w3-large">Support</p>
+<p>Clear communication and help.</p>
+</div>
+</div>
+</div>
+
+<!-- ABOUT ME -->
+<div class="w3-container w3-light-grey w3-padding-64">
+<div class="w3-row">
+<div class="w3-col m6 w3-center">
+<img src="himanshu.jpg" class="w3-round w3-image" width="300">
+</div>
+<div class="w3-col m6">
+<p>
+Hello, I’m Himanshu Khadka, the Director of Anveshan.<br><br>
+
+At Anveshan, I lead a passionate team that provides web development, design,
+and digital services to help ideas grow into real results. From building websites
+to creating visual content, we focus on quality, creativity, and reliability.<br><br>
+
+Our goal is simple — to deliver meaningful work that helps people and businesses move forward.
+</p>
+</div>
+</div>
+</div>
+
+<!-- TEAM -->
+<div class="w3-container w3-padding-64" id="team">
+<div id="teamContainer" class="team-grid"></div>
+</div>
+
+<!-- SERVICES GRID -->
+<div class="w3-row w3-container">
+  <div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What We Offer</span>
+  </div>
+
+  <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+    <h3>Graphics Design</h3>
+    <p>Graphic design is about turning ideas into visuals that people can easily understand and connect with.</p>
+  </div>
+
+  <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+    <h3>Boosting</h3>
+    <p>It refers to raising performance, visibility, or impact.</p>
+  </div>
+
+  <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
+    <h3>Frontend</h3>
+    <p>The part users see and interact with (HTML, CSS, JS).</p>
+  </div>
+
+  <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
+    <h3>Backend</h3>
+    <p>Works behind the scenes with logic and server operations.</p>
+  </div>
+</div>
+<br>
+<!-- PRICING -->
+
+ <!-- Grid -->
+  <div class="w3-row-padding" id="plans">
+    <div class="w3-center w3-padding-64">
+      <h3>Pricing Plans</h3>
+      <p>Choose a pricing plan that fits your needs.</p>
+    </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+      <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+    
+      <li class="w3-padding-16"><b>5</b> Graphics Designs</li>
+      <li class="w3-padding-16"><b>3</b> Boosting</li>
+      <li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
+      <li class="w3-padding-16"><b>Endless</b> Support</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide">$10</h2>
+        <span class="w3-opacity">per month</span>
+      </li>
+      <li class="w3-light-grey w3-padding-24">
+        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+      <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+      
+      <li class="w3-padding-16"><b>10+</b> Graphics Designs</li>
+      <li class="w3-padding-16"><b>5</b> Boosting</li>
+      <li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
+      <li class="w3-padding-16"><b>Endless</b> Support</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide">$20</h2>
+        <span class="w3-opacity">per month</span>
+      </li>
+      <li class="w3-light-grey w3-padding-24">
+        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+      <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+      
+      <li class="w3-padding-16"><b>15</b> Graphics Designs</li>
+      <li class="w3-padding-16"><b>10</b> Boosting</li>
+      <li class="w3-padding-16"><i class="fa fa-check-circle"></i> Verified Badge</li>
+      <li class="w3-padding-16"><b>Endless</b> Support</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide">$30</h2>
+        <span class="w3-opacity">per month</span>
+      </li>
+      <li class="w3-light-grey w3-padding-24">
+        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<h3 class="w3-center">CONTACT</h3>
+
+<div class="w3-row-padding" style="margin-top:48px">
+<div class="w3-col m5">
+<p>Kathmandu, Nepal</p>
+<p>9761120781</p>
+<p>anveshanprojects@gmail.com</p>
+</div>
+
+<div class="w3-col m7">
+<form action="https://formspree.io/f/xykjkdvn" method="POST">
+<input class="w3-input w3-border" type="text" name="name" placeholder="Name" required>
+<input class="w3-input w3-border w3-section" type="email" name="email" placeholder="Email" required>
+<textarea class="w3-input w3-border w3-section" name="message" placeholder="Message" required></textarea>
+<button class="w3-button w3-black w3-right" type="submit">SEND</button>
+</form>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="w3-center w3-black w3-padding-64">
+<a href="#home" class="w3-button w3-light-grey">To the top</a>
+<p>Powered by Anveshan</p>
+</footer>
+
+<script>
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  mySidebar.style.display = (mySidebar.style.display === 'block') ? 'none' : 'block';
+}
+
+function w3_close() {
+  mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
